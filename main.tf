@@ -55,7 +55,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
   tags = {
     environment = "dev"
-    owner       = "deepak kumar"
+    owner       = "deepak kumar sahoo"
     project     = "Terraform-AKS-IAC"
   }
 }
