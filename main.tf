@@ -17,16 +17,9 @@ provider "azurerm" {
   client_id       = var.azure_client_id
   client_secret   = var.azure_client_secret
   
-  # Skip provider registration as we're using free tier
-  skip_provider_registration = true
 }
 
 # Resource Group
-resource "azurerm_resource_group" "app_aks_lab" {
-  name     = var.resource_group_name
-  location = var.location
-}
-
 resource "azurerm_resource_group" "aks_rg" {
   name     = var.resource_group_name
   location = var.location
