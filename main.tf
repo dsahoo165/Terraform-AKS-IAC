@@ -42,7 +42,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   default_node_pool {
     name       = "default"
     node_count = 1
-    vm_size    = "Standard_B2s" # Smallest recommended for AKS
+    vm_size    = "Standard_B2s" #  Smallest recommended for AKS
     os_disk_size_gb = 30
   }
 
