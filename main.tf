@@ -7,6 +7,14 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "remote" {
+    organization = "Deepak-TFE-cloud-Practice"
+
+    workspaces {
+      name = "Terraform-AKS-IAC"
+    }
+  }
 }
 
 provider "azurerm" {
@@ -44,5 +52,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
   network_profile {
     network_plugin = "kubenet"
+  }
+  tags = {
+    environment = "dev"
+    owner       = "your-name"
+    project     = "Terraform-AKS-IAC"
   }
 }
