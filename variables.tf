@@ -1,3 +1,15 @@
+# AKS Cluster Variables
+variable "aks_cluster_name" {
+  description = "Name of the AKS cluster"
+  type        = string
+  default     = "aks-lab-cluster"
+}
+
+variable "dns_prefix" {
+  description = "DNS prefix for the AKS cluster"
+  type        = string
+  default     = "aks-lab"
+}
 # Azure Authentication Variables
 variable "azure_subscription_id" {
   description = "Azure Subscription ID"
